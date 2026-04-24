@@ -100,8 +100,18 @@ The application allows users to vote between **Cats 🐱 and Dogs 🐶**, proces
 - YAML-based infrastructure definition
   
 ## ⚠️ Challenges Faced
-Service-to-service communication issues due to incorrect DNS resolution
-Redis connection failures between worker and database layer
-Pod restart loops due to misconfigured environment variables
-Debugging distributed logs across multiple containers
-Understanding Kubernetes networking behavior in Minikube
+- Configuring service-to-service communication using Kubernetes DNS correctly
+- Debugging Redis connectivity issues between Worker and database layer
+- Handling CrashLoopBackOff errors due to misconfigured environment variables
+- Managing distributed logs across multiple microservices for debugging
+- Understanding asynchronous flow (Vote → Redis → Worker → Result)
+- Limitations of Minikube single-node setup for real-world scaling scenarios
+
+## 🚀 Future Improvements
+- Add CI/CD pipeline using GitHub Actions or Jenkins
+- Package project using Helm charts for easier deployment
+- Deploy on AWS EKS / GCP GKE for production-grade experience
+- Integrate Prometheus + Grafana for monitoring and observability
+- Implement Ingress Controller for unified external access
+- Enable Horizontal Pod Autoscaling (HPA) for scalability
+- Use Terraform (IaC) for infrastructure automation

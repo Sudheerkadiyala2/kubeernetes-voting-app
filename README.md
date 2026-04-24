@@ -91,13 +91,13 @@ The application allows users to vote between **Cats 🐱 and Dogs 🐶**, proces
 ---
 ##  🧠 Key Kubernetes Concepts Used
 
-- **Pods & Deployments
-- **Services (ClusterIP / NodePort)
-- **Service Discovery using DNS
-- **Container Orchestration
-- **Internal Cluster Networking
-- **Replica Sets for scalability
-- **YAML-based infrastructure definition
+- Pods & Deployments
+- Services (ClusterIP / NodePort)
+- Service Discovery using DNS
+- Container Orchestration
+- Internal Cluster Networking
+- Replica Sets for scalability
+- YAML-based infrastructure definition
   
 ## ⚠️ Challenges Faced
 Service-to-service communication issues due to incorrect DNS resolution

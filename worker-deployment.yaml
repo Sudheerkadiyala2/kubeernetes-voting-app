@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: worker
+  namespace: voting-app 
 spec:
   replicas: 1
   selector:
@@ -20,3 +21,10 @@ spec:
                value: redis
              - name: REDIS_PORT
                value: "6379"
+           resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"    

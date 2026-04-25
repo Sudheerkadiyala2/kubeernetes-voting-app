@@ -25,6 +25,19 @@ spec:
             requests:
               memory: "64Mi"
               cpu: "250m"
-            limits:
+           limits:
               memory: "128Mi"
               cpu: "500m"    
+           livenessProbe:
+            httpGet:
+             path: /
+             port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
+
+          readinessProbe:
+           httpGet:
+            path: /
+            port: 80
+           initialDelaySeconds: 5
+           periodSeconds: 5
